@@ -24,6 +24,8 @@ RUN apk add --no-cache openjdk11 \
 
 WORKDIR /app
 COPY HelloWorld.java /app/HelloWorld.java
+RUN /usr/lib/jvm/java-11-openjdk/bin/javac HelloWorld.java
+RUN /usr/lib/jvm/java-11-openjdk/bin/jar cfe app.jar HelloWorld HelloWorld.class
 
-CMD ["java", "HelloWorld.java"]
+CMD ["java", "-jar", "app.jar"]
 
