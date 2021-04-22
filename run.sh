@@ -4,7 +4,7 @@ source sgx_device.sh
 
 determine_sgx_device &&\
 echo "Run sconified image..." && \
-docker run -it --rm --network=host $MOUNT_SGXDEVICE \
+docker run -it --rm  $MOUNT_SGXDEVICE \
 -eSCONE_VERSION=1 \
 -eSCONE_HEAP=4G \
 -eSCONE_MODE=hw \
