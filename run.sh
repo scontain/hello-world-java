@@ -8,7 +8,7 @@ docker run -it --rm  $MOUNT_SGXDEVICE \
 -eSCONE_VERSION=1 \
 -eSCONE_HEAP=4G \
 -eSCONE_MODE=hw \
--eSCONE_LOG="7" \
+-eSCONE_LOG="DEBUG" \
 -ePATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-11-openjdk/jre/bin:/usr/lib/jvm/java-11-openjdk/bin" \
 -eLANG="C.UTF-8" \
 -eJAVA_TOOL_OPTIONS="-Xmx256m" \
